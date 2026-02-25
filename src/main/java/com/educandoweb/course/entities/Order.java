@@ -134,13 +134,7 @@ public class Order implements Serializable {
 	public Set<OrderItem> getItems() {
 		return items;
 	}
-
-
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(id);
-	}
+	
 	
 	public Double getTotal() {
 		Double sum = 0.0;
@@ -152,6 +146,12 @@ public class Order implements Serializable {
 	}
 
 
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+	
 
 	@Override
 	public boolean equals(Object obj) {
